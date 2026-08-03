@@ -1,0 +1,652 @@
+<!-- Copyright (c) 2026. Based on concept map by Wuping Xin. Adapted for regulatory compliance. -->
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>小型个人信息处理者个人信息保护简化措施规定 - 合规思维导图</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+SC:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #f4f3ef;
+      --wrap-bg: #f0ede8;
+      --wrap-border: #e0ddd6;
+      --grid-line: rgba(0,0,0,0.03);
+      --text-primary: #1a1a18;
+      --text-secondary: #3a3a38;
+      --text-muted: #6b6b66;
+      --text-faint: #8a8a82;
+      --text-hint: #aaa8a0;
+      --accent: #C9482B;
+      --accent-muted: rgba(201,72,43,0.2);
+      --accent-glow: rgba(201,72,43,0.3);
+      --detail-bg: #fff;
+      --detail-border: #e0ddd6;
+      --detail-note-bg: #fdf6f4;
+      --detail-note-border: #f0d0c6;
+      --footer-border: rgba(0,0,0,0.07);
+      --stem-color: rgba(0,0,0,0.12);
+      --node-hover-shadow: rgba(0,0,0,0.12);
+      --rd-bg: #FDF2EE; --rd-fg: #8B2E15; --rd-bdr: #F0C4B6;
+      --rd2-bg: #FBE8E0; --rd2-fg: #C9482B; --rd2-bdr: #E8A590;
+      --bl-bg: #E6F1FB; --bl-fg: #0C447C; --bl-bdr: #B5D4F4;
+      --bl2-bg: #d8eaf8; --bl2-fg: #185FA5; --bl2-bdr: #92c1ee;
+      --gn-bg: #EAF3DE; --gn-fg: #27500A; --gn-bdr: #C0DD97;
+      --gn2-bg: #dff0ce; --gn2-fg: #3B6D11; --gn2-bdr: #a8d47a;
+      --am-bg: #FAEEDA; --am-fg: #633806; --am-bdr: #FAC775;
+      --pu-bg: #EEEDFE; --pu-fg: #3C3489; --pu-bdr: #C5C1F4;
+      --pu2-bg: #E4E3F8; --pu2-fg: #534AB7; --pu2-bdr: #b8b4ee;
+      --gy-bg: #EEECEA; --gy-fg: #444441; --gy-bdr: #D3D1C7;
+      --te-bg: #E1F5EE; --te-fg: #085041; --te-bdr: #9FE1CB;
+      --co-bg: #FAECE7; --co-fg: #712B13; --co-bdr: #F5C4B3;
+    }
+
+    [data-theme="dark"] {
+      --bg: #111114;
+      --wrap-bg: #1a1a1f;
+      --wrap-border: #2a2a32;
+      --grid-line: rgba(255,255,255,0.03);
+      --text-primary: #ededeb;
+      --text-secondary: #b8b8b4;
+      --text-muted: #8a8a84;
+      --text-faint: #6a6a64;
+      --text-hint: #555550;
+      --accent: #E8735A;
+      --accent-muted: rgba(232,115,90,0.25);
+      --accent-glow: rgba(232,115,90,0.35);
+      --detail-bg: #222228;
+      --detail-border: #333340;
+      --detail-note-bg: #2a201e;
+      --detail-note-border: #3d2a24;
+      --footer-border: rgba(255,255,255,0.07);
+      --stem-color: rgba(255,255,255,0.12);
+      --node-hover-shadow: rgba(0,0,0,0.4);
+      --rd-bg: #2a1a16; --rd-fg: #e0a090; --rd-bdr: #3d2820;
+      --rd2-bg: #301e18; --rd2-fg: #f0b0a0; --rd2-bdr: #4a3028;
+      --bl-bg: #172840; --bl-fg: #8dbde8; --bl-bdr: #1f3a5a;
+      --bl2-bg: #1c3050; --bl2-fg: #9dcaf0; --bl2-bdr: #264870;
+      --gn-bg: #1e2e14; --gn-fg: #a0d070; --gn-bdr: #304818;
+      --gn2-bg: #243818; --gn2-fg: #b0e080; --gn2-bdr: #3a5820;
+      --am-bg: #352a14; --am-fg: #f0c870; --am-bdr: #504018;
+      --pu-bg: #2a2850; --pu-fg: #b0abf0; --pu-bdr: #3d3970;
+      --pu2-bg: #302d5a; --pu2-fg: #c4bff5; --pu2-bdr: #4a4580;
+      --gy-bg: #252524; --gy-fg: #b0b0a8; --gy-bdr: #404038;
+      --te-bg: #152e28; --te-fg: #7fd4b5; --te-bdr: #1f4a3e;
+      --co-bg: #351e16; --co-fg: #f0a890; --co-bdr: #503020;
+    }
+
+    body {
+      font-family: 'Inter', 'Noto Sans SC', sans-serif;
+      background: var(--bg);
+      color: var(--text-primary);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      padding: 40px 16px 80px;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+
+    .page {
+      width: 100%; max-width: 1200px;
+      display: grid;
+      grid-template-columns: 1fr 6px minmax(280px, 400px);
+      align-items: start;
+    }
+
+    .divider {
+      width: 6px;
+      cursor: col-resize;
+      background: transparent;
+      position: relative;
+      align-self: stretch;
+      z-index: 5;
+    }
+    .divider::after {
+      content: '';
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      width: 4px; height: 48px;
+      border-radius: 2px;
+      background: var(--accent-muted);
+      transition: background 0.2s, height 0.2s;
+    }
+    .divider:hover::after, .divider.dragging::after {
+      background: var(--accent);
+      height: 64px;
+    }
+
+    .wrap {
+      background: var(--wrap-bg);
+      border: 1px solid var(--wrap-border);
+      border-radius: 20px;
+      padding: 44px 40px 56px;
+      position: relative;
+      overflow: visible;
+      transition: background 0.3s ease, border-color 0.3s ease;
+    }
+
+    .grid-bg {
+      position: absolute; inset: 0; pointer-events: none; border-radius: 20px;
+      background-image:
+        linear-gradient(var(--grid-line) 1px, transparent 1px),
+        linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+      background-size: 36px 36px;
+    }
+
+    .z { position: relative; z-index: 1; }
+
+    .theme-toggle {
+      position: absolute; top: 16px; right: 16px; z-index: 10;
+      width: 42px; height: 24px;
+      background: var(--wrap-border);
+      border: none; border-radius: 12px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      padding: 0;
+    }
+    .theme-toggle::after {
+      content: '';
+      position: absolute;
+      top: 3px; left: 3px;
+      width: 18px; height: 18px;
+      border-radius: 50%;
+      background: var(--accent);
+      transition: transform 0.3s ease, background 0.3s ease;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+    }
+    [data-theme="dark"] .theme-toggle::after {
+      transform: translateX(18px);
+    }
+    .theme-toggle-icon {
+      position: absolute; top: 50%; transform: translateY(-50%);
+      font-size: 12px; line-height: 1;
+    }
+    .theme-toggle-icon.sun { left: 5px; }
+    .theme-toggle-icon.moon { right: 5px; }
+
+    .header { margin-bottom: 36px; }
+    .hd-kicker { font-size: 12px; font-weight: 700; letter-spacing: 0.22em; color: var(--accent); text-transform: uppercase; margin-bottom: 10px; }
+    .hd-title  { font-size: 28px; font-weight: 800; color: var(--text-primary); margin-bottom: 8px; letter-spacing: -0.03em; line-height: 1.3; }
+    .hd-sub    { font-size: 15px; color: var(--text-muted); }
+    .hd-rule   { width: 40px; height: 3px; background: var(--accent); margin-top: 16px; border-radius: 2px; }
+
+    .center-wrap { display: flex; justify-content: center; margin-bottom: 5px; }
+    .center-node {
+      background: linear-gradient(135deg, var(--accent), #E8735A);
+      color: #fff;
+      font-size: 15px; font-weight: 700;
+      padding: 14px 34px; border-radius: 32px;
+      letter-spacing: 0.02em;
+      box-shadow: 0 4px 20px var(--accent-glow);
+      animation: pulse-glow 3s ease-in-out infinite;
+    }
+    @keyframes pulse-glow {
+      0%, 100% { box-shadow: 0 4px 20px var(--accent-glow); }
+      50% { box-shadow: 0 4px 30px var(--accent-glow), 0 0 40px rgba(201,72,43,0.15); }
+    }
+
+    .stem-wrap { display: flex; justify-content: center; margin: 6px 0; }
+    .stem {
+      width: 3px; height: 28px;
+      background: linear-gradient(to bottom, var(--accent), var(--accent-muted));
+      border-radius: 2px;
+      opacity: 0.6;
+    }
+    .connector-dots { display: flex; justify-content: center; gap: 6px; margin-bottom: 8px; }
+    .connector-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--accent); opacity: 0.4; }
+
+    .layer { margin-bottom: 24px; }
+    .lh {
+      display: flex; align-items: center; gap: 10px; margin-bottom: 12px;
+      cursor: pointer; user-select: none;
+      padding: 6px 0;
+    }
+    .lh:hover .ln, .lh:hover .lt { opacity: 0.75; }
+    .ln { font-size: 13px; font-weight: 800; letter-spacing: 0.12em; color: var(--text-primary); transition: opacity 0.15s; }
+    .lt { font-size: 13px; font-weight: 600; letter-spacing: 0.04em; color: var(--text-secondary); text-transform: uppercase; transition: opacity 0.15s; }
+    .ll { flex: 1; height: 2px; background: linear-gradient(to right, var(--accent-muted), transparent 80%); border-radius: 1px; }
+    .lh-chevron {
+      font-size: 14px; color: var(--text-muted);
+      transition: transform 0.25s ease;
+      display: inline-block;
+      line-height: 1;
+    }
+    .layer.collapsed .lh-chevron { transform: rotate(-90deg); }
+    .layer-body {
+      overflow: visible;
+      max-height: none;
+      transition: max-height 0.35s ease, opacity 0.25s ease;
+      opacity: 1;
+    }
+    .layer.collapsed .layer-body {
+      overflow: hidden;
+      max-height: 0;
+      opacity: 0;
+    }
+
+    .nodes { display: flex; gap: 8px; flex-wrap: wrap; }
+
+    .nd {
+      border-radius: 10px;
+      border: 1px solid transparent;
+      padding: 10px 16px;
+      font-size: 13px; font-weight: 500;
+      line-height: 1.3; cursor: pointer;
+      transition: transform 0.15s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+      user-select: none;
+      opacity: 0;
+      animation: node-enter 0.4s ease forwards;
+    }
+    @keyframes node-enter {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .nd:hover { transform: translateY(-3px); box-shadow: 0 6px 20px var(--node-hover-shadow); }
+    .nd:active { transform: scale(0.97); }
+    .nd.active { box-shadow: 0 0 0 2.5px var(--accent), 0 4px 16px var(--accent-glow); }
+    .nd.lg { font-size: 15px; font-weight: 700; padding: 12px 18px; border-radius: 11px; }
+    .nd.md { font-size: 14px; font-weight: 600; padding: 10px 16px; }
+    .nd.sm { font-size: 12px; font-weight: 500; padding: 7px 12px; border-radius: 7px; }
+
+    .rd  { background: var(--rd-bg); color: var(--rd-fg); border-color: var(--rd-bdr); }
+    .rd2 { background: var(--rd2-bg); color: var(--rd2-fg); border-color: var(--rd2-bdr); }
+    .bl  { background: var(--bl-bg); color: var(--bl-fg); border-color: var(--bl-bdr); }
+    .bl2 { background: var(--bl2-bg); color: var(--bl2-fg); border-color: var(--bl2-bdr); }
+    .gn  { background: var(--gn-bg); color: var(--gn-fg); border-color: var(--gn-bdr); }
+    .gn2 { background: var(--gn2-bg); color: var(--gn2-fg); border-color: var(--gn2-bdr); }
+    .am  { background: var(--am-bg); color: var(--am-fg); border-color: var(--am-bdr); }
+    .pu  { background: var(--pu-bg); color: var(--pu-fg); border-color: var(--pu-bdr); }
+    .pu2 { background: var(--pu2-bg); color: var(--pu2-fg); border-color: var(--pu2-bdr); }
+    .gy  { background: var(--gy-bg); color: var(--gy-fg); border-color: var(--gy-bdr); }
+    .te  { background: var(--te-bg); color: var(--te-fg); border-color: var(--te-bdr); }
+    .co  { background: var(--co-bg); color: var(--co-fg); border-color: var(--co-bdr); }
+
+    .sb { border-left: 2px solid; padding-left: 12px; margin-left: 2px; margin-top: 7px; }
+    .sb-rd { border-color: rgba(201,72,43,0.25); }
+    .sb-bl { border-color: rgba(12,68,124,0.25); }
+    .sb-gn { border-color: rgba(39,80,10,0.25); }
+    .sb-note { font-size: 11.5px; margin-top: 6px; padding-left: 2px; color: var(--text-muted); }
+
+    .l01 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; }
+    .col { display: flex; flex-direction: column; gap: 5px; }
+    .col-hd { font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 4px; padding: 0 2px; }
+    .col-hd.c-rd { color: var(--rd-fg); }
+    .col-hd.c-bl { color: var(--bl-fg); }
+    .col-hd.c-gn { color: var(--gn-fg); }
+
+    .layer-note { font-size: 12.5px; color: var(--text-muted); margin-top: 10px; padding-left: 2px; font-style: italic; line-height: 1.55; }
+
+    .hint { text-align: center; font-size: 13px; color: var(--text-muted); margin: 12px 0 20px; }
+
+    .detail-sidebar {
+      position: sticky;
+      top: 40px;
+      max-height: calc(100vh - 80px);
+      overflow-y: auto;
+    }
+    .detail {
+      padding: 24px 24px;
+      background: var(--detail-bg);
+      border: 1.5px solid var(--detail-border);
+      border-radius: 14px;
+      border-left: 4px solid var(--detail-border);
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+      transition: opacity 0.2s ease, background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    .detail.has-accent-rd  { border-left-color: var(--rd-bdr); }
+    .detail.has-accent-rd2 { border-left-color: var(--rd2-bdr); }
+    .detail.has-accent-bl  { border-left-color: var(--bl-bdr); }
+    .detail.has-accent-bl2 { border-left-color: var(--bl2-bdr); }
+    .detail.has-accent-gn  { border-left-color: var(--gn-bdr); }
+    .detail.has-accent-gn2 { border-left-color: var(--gn2-bdr); }
+    .detail.has-accent-am  { border-left-color: var(--am-bdr); }
+    .detail.has-accent-pu  { border-left-color: var(--pu-bdr); }
+    .detail.has-accent-pu2 { border-left-color: var(--pu2-bdr); }
+    .detail.has-accent-gy  { border-left-color: var(--gy-bdr); }
+    .detail.has-accent-te  { border-left-color: var(--te-bdr); }
+    .detail.has-accent-co  { border-left-color: var(--co-bdr); }
+
+    .detail-layer { font-size: 12px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 6px; }
+    .detail-title { font-size: 24px; font-weight: 800; color: var(--text-primary); margin-bottom: 8px; letter-spacing: -0.02em; }
+    .detail-badge { display: inline-block; font-size: 12.5px; font-weight: 600; padding: 5px 14px; border-radius: 7px; border: 1px solid transparent; margin-bottom: 16px; }
+    .detail-desc { font-size: 15px; line-height: 1.8; color: var(--text-secondary); margin-bottom: 16px; }
+    .detail-note {
+      font-size: 13.5px; color: var(--text-secondary);
+      background: var(--detail-note-bg);
+      padding: 11px 15px; border-radius: 9px;
+      border-left: 3px solid var(--detail-note-border);
+      line-height: 1.7;
+    }
+
+    .footer {
+      margin-top: 44px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid var(--footer-border);
+      padding-top: 18px;
+    }
+    .footer-note { font-size: 12.5px; color: var(--text-muted); max-width: 500px; line-height: 1.65; }
+    .footer-right { text-align: right; }
+    .footer-brand { font-size: 11px; color: var(--text-muted); font-weight: 700; letter-spacing: 0.14em; white-space: nowrap; }
+    .footer-license { font-size: 11px; color: var(--text-muted); margin-top: 3px; }
+
+    .layer-controls { display: flex; gap: 8px; margin-bottom: 16px; }
+    .layer-ctrl-btn {
+      font-family: 'Inter', 'Noto Sans SC', sans-serif;
+      font-size: 12px; font-weight: 600;
+      padding: 6px 14px;
+      border: 1.5px solid var(--wrap-border);
+      border-radius: 8px;
+      background: var(--detail-bg);
+      color: var(--text-secondary);
+      cursor: pointer;
+      transition: background 0.15s, border-color 0.15s, color 0.15s;
+    }
+    .layer-ctrl-btn:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    @media (max-width: 900px) {
+      .page { grid-template-columns: 1fr !important; max-width: 780px; }
+      .divider { display: none; }
+      .detail-sidebar { position: static; max-height: none; }
+      .detail { margin-top: 16px; }
+    }
+    @media (max-width: 600px) {
+      .wrap { padding: 28px 18px 40px; border-radius: 14px; }
+      .l01 { grid-template-columns: 1fr; }
+      .hd-title { font-size: 19px; }
+      .detail { padding: 18px 16px; }
+      .detail-title { font-size: 18px; }
+      .detail-desc { font-size: 13px; }
+      .footer { flex-direction: column; align-items: flex-start; gap: 10px; }
+      .nodes { gap: 6px; }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+<div class="wrap">
+  <div class="grid-bg"></div>
+  <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode">
+    <span class="theme-toggle-icon sun" aria-hidden="true"></span>
+    <span class="theme-toggle-icon moon" aria-hidden="true"></span>
+  </button>
+  <div class="z">
+
+    <div class="header">
+      <div class="hd-kicker">个人信息保护合规思维导图</div>
+      <div class="hd-title">《小型个人信息处理者个人信息保护简化措施规定》</div>
+      <div class="hd-sub">2026年第25号令 · 2026年9月1日施行 · 点击任意节点查看详细解读</div>
+      <div class="hd-rule"></div>
+    </div>
+
+    <div class="layer-controls">
+      <button class="layer-ctrl-btn" onclick="toggleAllLayers(false)">展开全部</button>
+      <button class="layer-ctrl-btn" onclick="toggleAllLayers(true)">折叠全部</button>
+    </div>
+
+    <div class="center-wrap"><div class="center-node">处理不满10万人个人信息的处理者</div></div>
+    <div class="stem-wrap"><div class="stem"></div></div>
+    <div class="connector-dots"><div class="connector-dot"></div><div class="connector-dot"></div><div class="connector-dot"></div></div>
+
+    <!-- Layer 01: 适用判断 -->
+    <div class="layer" id="layer1">
+      <div class="lh" onclick="toggleLayer('layer1')"><span class="ln">LAYER 01</span><span class="lt">适用判断</span><span class="ll"></span><span class="lh-chevron">&#9660;</span></div>
+      <div class="layer-body"><div class="l01">
+        <div class="col">
+          <div class="col-hd c-rd">适用范围</div>
+          <div class="nd lg rd" onclick="show('scope',this)" style="animation-delay:0.05s">境内小型处理者</div>
+          <div class="sb sb-rd">
+            <div class="nodes" style="flex-direction:column;gap:4px;">
+              <div class="nd sm rd2" onclick="show('territory',this)" style="animation-delay:0.1s">中华人民共和国境内</div>
+              <div class="nd sm rd2" onclick="show('effective',this)" style="animation-delay:0.15s">2026.9.1 施行</div>
+            </div>
+            <div class="sb-note">第2条 · 地域与时间效力</div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="col-hd c-bl">核心定义</div>
+          <div class="nd lg bl" onclick="show('definition',this)" style="animation-delay:0.1s">不满10万人个人信息</div>
+          <div class="sb sb-bl">
+            <div class="nodes" style="flex-direction:column;gap:4px;">
+              <div class="nd sm bl2" onclick="show('counting',this)" style="animation-delay:0.15s">按当前处理自然人数量统计</div>
+              <div class="nd sm bl2" onclick="show('merge',this)" style="animation-delay:0.2s">同一主体合并计算</div>
+            </div>
+            <div class="sb-note">第2条 · 统计口径</div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="col-hd c-gn">排除情形</div>
+          <div class="nd lg gn" onclick="show('exclusion',this)" style="animation-delay:0.15s">不适用/退出</div>
+          <div class="sb sb-gn">
+            <div class="nodes" style="flex-direction:column;gap:4px;">
+              <div class="nd sm gn2" onclick="show('deleted',this)" style="animation-delay:0.2s">已删除信息不计入</div>
+              <div class="nd sm gn2" onclick="show('threshold',this)" style="animation-delay:0.25s">达10万人自动退出</div>
+            </div>
+            <div class="sb-note">第2条 · 动态退出机制</div>
+          </div>
+        </div>
+      </div></div>
+    </div>
+
+    <div class="stem-wrap"><div class="stem"></div></div>
+
+    <!-- Layer 02: 简化措施 -->
+    <div class="layer" id="layer2">
+      <div class="lh" onclick="toggleLayer('layer2')"><span class="ln">LAYER 02</span><span class="lt">简化措施</span><span class="ll"></span><span class="lh-chevron">&#9660;</span></div>
+      <div class="layer-body"><div class="nodes">
+        <div class="nd lg rd" onclick="show('rule_simple',this)" style="animation-delay:0.1s">处理规则简化（第4-5条）</div>
+        <div class="nd lg bl" onclick="show('consent_simple',this)" style="animation-delay:0.15s">告知同意简化（第6-7条）</div>
+        <div class="nd lg gn" onclick="show('platform_exempt',this)" style="animation-delay:0.2s">平台豁免（第8条）</div>
+        <div class="nd lg am" onclick="show('audit_simple',this)" style="animation-delay:0.25s">审计评估简化（第13-14条）</div>
+        <div class="nd lg pu" onclick="show('transfer_simple',this)" style="animation-delay:0.3s">转移告知简化（第9条）</div>
+        <div class="nd gy" onclick="show('breach_simple',this)" style="animation-delay:0.35s">安全事件通知简化（第16条）</div>
+        <div class="nd te" onclick="show('mgmt_simple',this)" style="animation-delay:0.4s">管理制度简化（第15条）</div>
+        <div class="nd co" onclick="show('rights_simple',this)" style="animation-delay:0.45s">权利响应简化（第11条）</div>
+      </div>
+      <div class="layer-note">简化的是义务履行方式，不是法律责任本身。每项简化均有其适用前提。</div>
+    </div></div>
+
+    <div class="stem-wrap"><div class="stem"></div></div>
+
+    <!-- Layer 03: 底线义务 -->
+    <div class="layer" id="layer3">
+      <div class="lh" onclick="toggleLayer('layer3')"><span class="ln">LAYER 03</span><span class="lt">底线义务 · 不可简化</span><span class="ll"></span><span class="lh-chevron">&#9660;</span></div>
+      <div class="layer-body"><div class="nodes">
+        <div class="nd lg co" onclick="show('sensitive_consent',this)" style="animation-delay:0.1s">敏感信息单独同意</div>
+        <div class="nd lg co" onclick="show('minor_protect',this)" style="animation-delay:0.15s">未成年人保护</div>
+        <div class="nd lg co" onclick="show('delete_duty',this)" style="animation-delay:0.2s">停止服务删除信息</div>
+        <div class="nd lg co" onclick="show('breach_report',this)" style="animation-delay:0.25s">安全事件报告报案</div>
+        <div class="nd lg co" onclick="show('crossborder_tell',this)" style="animation-delay:0.3s">出境告知+单独同意</div>
+        <div class="nd gy" onclick="show('important_data',this)" style="animation-delay:0.35s">重要数据不适用简化</div>
+        <div class="nd gy" onclick="show('cooperate',this)" style="animation-delay:0.4s">配合监督检查</div>
+        <div class="nd gy" onclick="show('record_keep',this)" style="animation-delay:0.45s">留档备查义务</div>
+      </div>
+      <div class="layer-note">底线义务是监管红线。简化措施不适用于这些义务——任何规模的个人信息处理者均须严格遵守。</div>
+    </div></div>
+
+    <div class="stem-wrap"><div class="stem"></div></div>
+
+    <!-- Layer 04: 数据出境 -->
+    <div class="layer" id="layer4">
+      <div class="lh" onclick="toggleLayer('layer4')"><span class="ln">LAYER 04</span><span class="lt">数据出境 第10条</span><span class="ll"></span><span class="lh-chevron">&#9660;</span></div>
+      <div class="layer-body"><div class="nodes">
+        <div class="nd lg rd" onclick="show('cb_contract',this)" style="animation-delay:0.1s">合同必需场景</div>
+        <div class="nd lg rd" onclick="show('cb_hr',this)" style="animation-delay:0.15s">跨境人力资源管理</div>
+        <div class="nd lg rd" onclick="show('cb_emergency',this)" style="animation-delay:0.2s">紧急情况保护生命财产</div>
+        <div class="nd lg rd" onclick="show('cb_legal',this)" style="animation-delay:0.25s">法定职责或义务</div>
+        <div class="nd lg rd" onclick="show('cb_quantity',this)" style="animation-delay:0.3s">数量豁免<10万人</div>
+        <div class="nd bl" onclick="show('cb_nonexempt',this)" style="animation-delay:0.35s">告知+单独同意不可免</div>
+        <div class="nd bl" onclick="show('cb_important',this)" style="animation-delay:0.4s">重要数据排除</div>
+        <div class="nd gn" onclick="show('cb_province',this)" style="animation-delay:0.45s">省级网信程序便利</div>
+      </div>
+      <div class="layer-note">六类豁免仅免除安全评估/标准合同/认证三项程序。告知义务和单独同意不可豁免。</div>
+    </div></div>
+
+    <div class="stem-wrap"><div class="stem"></div></div>
+
+    <!-- Layer 05: 罚则与合规 -->
+    <div class="layer" id="layer5">
+      <div class="lh" onclick="toggleLayer('layer5')"><span class="ln">LAYER 05</span><span class="lt">罚则与合规行动</span><span class="ll"></span><span class="lh-chevron">&#9660;</span></div>
+      <div class="layer-body"><div class="nodes">
+        <div class="nd lg gn" onclick="show('penalty_none',this)" style="animation-delay:0.1s">应当不罚（第18条）</div>
+        <div class="nd lg gn" onclick="show('penalty_may',this)" style="animation-delay:0.15s">可以不罚 · 初次轻微</div>
+        <div class="nd lg am" onclick="show('penalty_light',this)" style="animation-delay:0.2s">从轻减轻（第19条）</div>
+        <div class="nd lg co" onclick="show('credit_impact',this)" style="animation-delay:0.25s">信用档案影响</div>
+        <div class="nd lg bl" onclick="show('action_inventory',this)" style="animation-delay:0.3s">合规行动清单</div>
+        <div class="nd lg pu" onclick="show('certification',this)" style="animation-delay:0.35s">认证免审计（第17条）</div>
+      </div>
+      <div class="layer-note">2026年9月1日前完成适用性自评及合规体系调整。</div>
+    </div></div>
+
+    <div class="footer">
+      <div class="footer-note">基于《小型个人信息处理者个人信息保护简化措施规定》（2026年第25号令）制作。仅供一般性参考，不构成法律意见。</div>
+      <div class="footer-right">
+        <div class="footer-brand">&copy; 2026 maqingquan团队</div>
+        <div class="footer-license">思维导图模型基于 <a href="https://wxinix.github.io/ai-concept-map" target="_blank" rel="noopener" style="color:var(--accent);text-decoration:none;">wxinix/ai-concept-map</a></div>
+      </div>
+    </div>
+
+  </div>
+</div>
+<div class="divider" id="divider"></div>
+<div class="detail-sidebar" id="sidebar">
+  <div class="detail" id="panel">
+    <div class="detail-layer">点击任意节点</div>
+    <div class="detail-title" style="color:var(--text-hint);">点击思维导图上的节点<br>查看详细解读</div>
+  </div>
+</div>
+</div>
+<script>
+const D = {
+  // LAYER 01
+  scope: { layer:'Layer 01 · 适用判断', title:'适用范围', badge:'第2条', bcls:'rd', desc:'在中华人民共和国境内的小型个人信息处理者实施个人信息保护，适用本规定。小型个人信息处理者，是指处理不满10万人个人信息的个人信息处理者。本规定自2026年9月1日起施行。', note:'核心门槛：不满10万人。一旦达到10万人即自动退出简化通道，须切换至《个保法》完整义务框架。企业应注意按主体合并计算，不得拆分量规避。' },
+  territory: { layer:'Layer 01 · 地域范围', title:'中华人民共和国境内', badge:'第2条', bcls:'rd2', desc:'本规定适用于在中国境内的小型个人信息处理者。境外企业在中国境内处理个人信息同样适用。处理者在境外的，如在境内设有机构或面向境内提供产品/服务，亦可能受中国法管辖。', note:'《个保法》第3条同时规定域外适用效力。企业在境外的处理活动若以向境内自然人提供产品或服务为目的，同样须遵守中国法。' },
+  effective: { layer:'Layer 01 · 时间效力', title:'2026年9月1日施行', badge:'第22条', bcls:'rd2', desc:'规定于2026年7月22日公布，自2026年9月1日起施行。企业应在施行日前完成适用性自评及合规体系调整，确保平稳过渡至新框架。', note:'建议企业在8月中旬前完成：盘点信息资产→确认适用资格→更新处理规则→排查敏感信息→建立内部制度→指定联系人。' },
+  definition: { layer:'Layer 01 · 核心定义', title:'不满10万人个人信息', badge:'第2条', bcls:'bl', desc:'处理不满10万人个人信息（不含10万人本数），按照个人信息处理者当前处理个人信息涉及的自然人数量进行累计统计。10万人是区分小型处理者和一般处理者的唯一数量标准。', note:'注意：第2条（主体资格）的10万是"总处理量"，第10条（出境豁免）的10万是"当年累计出境量"，两者统计口径不同，不可混淆。' },
+  counting: { layer:'Layer 01 · 统计口径', title:'按当前处理自然人数量统计', badge:'统计方法', bcls:'bl2', desc:'按照个人信息处理者当前处理个人信息涉及的自然人数量进行统计，不包括已经删除的个人信息。按"人"而非按"条"计算——同一个人的多条信息只算1人。', note:'实践中应定期（建议每季度）统计一次处理数量。员工信息应一并纳入统计。不得为维持"小型"资格而随意拆分主体。' },
+  merge: { layer:'Layer 01 · 合并计算', title:'同一主体合并计算', badge:'重要提示', bcls:'bl2', desc:'同一公司旗下的门店、业务线，处理个人信息数量应合并统计，不得拆分各自达标。例如3家连锁门店各有客户3万人，合计9万人，属于小型处理者。', note:'合并计算是监管重点。企业不得通过设立多个子公司、将客户分拆管理等方式人为降低处理数量。' },
+  exclusion: { layer:'Layer 01 · 排除与退出', title:'不适用或退出的情形', badge:'第2条', bcls:'gn', desc:'已删除的个人信息不计入统计。一旦处理量达到10万人，企业即自动退出简化通道，须按《个保法》完整义务框架执行。规定未设过渡安排——达标即切换。', note:'建议处理量达到8万人时即启动切换准备，提前制定完整的个人信息保护合规体系（隐私政策、个人信息保护负责人、定期审计等），避免临时切换的合规风险。' },
+  deleted: { layer:'Layer 01 · 已删除信息', title:'已删除信息不计入', badge:'统计口径', bcls:'gn2', desc:'已删除的个人信息不计入处理量的统计。但须注意：仅为统计便利而删除信息然后又从备份中恢复，属于规避监管行为。', note:'删除应当是真实的、不可恢复的（或达到匿名化标准）。企业应建立完善的个人信息删除和销毁记录。' },
+  threshold: { layer:'Layer 01 · 达标退出', title:'达10万人自动退出', badge:'无过渡期', bcls:'gn2', desc:'一旦处理个人信息达到10万人，企业自动退出简化通道。规定未设过渡安排——达到10万人后即须切换至《个保法》完整义务框架。审计、留档等周期性义务无需在达标当日完成，但切换准备应趁早。', note:'退出后须补足：完整的隐私政策、个人信息保护负责人（处理≥100万人时须报送）、更频繁的合规审计、完整的影响评估报告等。' },
+
+  // LAYER 02
+  rule_simple: { layer:'Layer 02 · 简化措施', title:'处理规则简化', badge:'第4-5条', bcls:'rd', desc:'处理规则最低仅需包含3项内容：①处理者名称或姓名；②个人行使权利的受理部门/人员及联系方式；③处理目的、方式、种类、保存期限。线下：在经营场所醒目位置张贴公告即可；线上：通过服务协议、弹窗和网站公告等。园区、商业物业可统一制定规则，列明商户名单后，商户可免自制。', note:'处理不满14周岁未成年人信息的，须制定专门的个人信息处理规则——此项不可简化。' },
+  consent_simple: { layer:'Layer 02 · 简化措施', title:'告知同意简化', badge:'第6-7条', bcls:'bl', desc:'满足以下条件可仅通过公开处理规则代替逐项告知：①处理不含敏感个人信息；②不向其他处理者提供且不对外公开；③在规则中明示。公开规则+告知后，个人主动自愿提供必需信息的，即可按规则处理——无需额外弹窗同意。但敏感个人信息须取得单独同意。', note:'核心关键词：必需+不外流+明示。三个条件须同时满足。其中"不对外提供"包括不向关联公司提供——集团内部的个人信息流转也可能突破此条件。' },
+  platform_exempt: { layer:'Layer 02 · 简化措施', title:'平台经营者豁免', badge:'第8条', bcls:'gn', desc:'入驻平台的商家满足以下条件可免制定规则和告知：①仅在平台内处理信息且不向平台外提供；②平台已有规则并约定了双方权利义务；③商家声明遵守平台规则且未超范围。平台已开展审计和评估覆盖其活动的，商家也无需重复。', note:'这是对广大平台内经营者（如淘宝店主、小程序商家）的重大利好。但须注意：一旦向平台外提供信息，或处理超出平台规则范围（如增加敏感信息收集），豁免资格即丧失。' },
+  audit_simple: { layer:'Layer 02 · 简化措施', title:'审计与评估简化', badge:'第13-14、17条', bcls:'am', desc:'合规审计：使用《合规审计自查表》（24项）自行填写，至少每5年一次，自查表保存≥5年。影响评估：使用《影响评估表》自行填写，保存≥3年。通过个人信息保护认证的，认证有效期内免予合规审计。', note:'注意：虽然表格简化，但签字人须对内容真实性承担法律责任。24项审计事项涵盖合法性基础、处理规则、告知、委托处理、对外提供、自动化决策、敏感信息、未成年人、数据出境等——这是《个保法》审计义务的浓缩版而非删减版。' },
+  transfer_simple: { layer:'Layer 02 · 简化措施', title:'合并分立转移告知', badge:'第9条', bcls:'pu', desc:'企业因合并、分立、解散等原因转移个人信息时，可通过张贴公告、短信提醒、弹窗公告等简便方式告知接收方信息，无需逐一通知。但须至少提前30个工作日发布，公开时长不少于30个工作日。', note:'股权收购因处理者主体不变，不触发此义务。资产收购涉及个人信息转移的，须遵守30个工作日的告知前置期，直接影响签约至交割的时间安排。' },
+  breach_simple: { layer:'Layer 02 · 简化措施', title:'安全事件通知简化', badge:'第16条', bcls:'gy', desc:'发生信息泄露时，补救措施+向监管部门报告+涉嫌犯罪报案——不可简化。通知个人方式：确因客观条件限制无法逐一通知的，可仅通过门店公告、弹窗、网站公告等方式。', note:'"客观条件限制"须有合理依据，不能仅因"不想逐一通知"就选择公告方式。建议企业留存条件判断的依据和过程记录。' },
+  mgmt_simple: { layer:'Layer 02 · 简化措施', title:'内部管理制度简化', badge:'第15条', bcls:'te', desc:'无需另起炉灶建立独立制度文件。在现有公司管理制度、员工手册或组织管理文件中增设个人信息保护内部管理要求和安全事件应急处置章节即可。', note:'虽名为"简化"，但管理制度的核心要素（方针目标、人员配备、操作权限、分类管理、应急预案、培训计划、投诉渠道、责任追究）不可缺失。' },
+  rights_simple: { layer:'Layer 02 · 简化措施', title:'权利响应机制简化', badge:'第11条', bcls:'co', desc:'无需建立复杂的在线工单系统或专门的权利响应平台。只需在处理规则中公开受理部门或人员的联系方式（电话/邮箱），建立个人行使权利的申请受理和处置机制即可。', note:'简化的是形式而非响应义务。收到权利请求后仍应在合理时间内（建议15个工作日内）予以响应。拒绝请求的应说明理由并告知投诉途径。' },
+
+  // LAYER 03
+  sensitive_consent: { layer:'Layer 03 · 底线义务', title:'敏感个人信息单独同意', badge:'不可简化', bcls:'co', desc:'处理人脸、指纹、医疗健康、金融账户、行踪轨迹等敏感个人信息时，须在处理规则中告知处理的必要性以及对个人权益的影响，并取得个人的单独同意。不可用公开规则代替告知，不可用"主动提供"代替单独同意。', note:'这是《规定》第7条明确保留的硬性要求。小型医美门店采集面部影像、小型牙科诊所采集口腔影像和病史、小贷公司进行人脸识别实名认证——均须履行单独告知和单独同意程序。' },
+  minor_protect: { layer:'Layer 03 · 底线义务', title:'不满14周岁未成年人保护', badge:'不可简化', bcls:'co', desc:'处理不满14周岁未成年人的个人信息，须取得其父母或其他监护人的同意；须制定专门的未成年人个人信息处理规则。小型处理者也不例外。《规定》第4条第3款明确保留了此义务。', note:'培训教育、儿童产品、儿科医疗等涉及未成年人的行业尤其需要注意。合规审计中对未成年人信息的审查有特别规定，不可简化。' },
+  delete_duty: { layer:'Layer 03 · 底线义务', title:'停止服务须删除信息', badge:'第12条', bcls:'co', desc:'企业终止服务或关闭门店后，必须删除或匿名化处理客户个人信息。确因技术限制无能力删除的，可向主管部门报告并请求帮助。主管部门不明确的，向所在地设区的市级网信部门报告。', note:'删除义务本身不可豁免——报告机制仅为法定的求助通道，而非免责理由。企业停业前的个人信息处置方案应纳入关停计划。' },
+  breach_report: { layer:'Layer 03 · 底线义务', title:'安全事件报告与报案', badge:'不可简化', bcls:'co', desc:'发生信息泄露、篡改、丢失等安全事件时：①立即采取补救措施——不可简化；②通知履行个人信息保护职责的部门——不可简化；③涉嫌犯罪的，及时向公安机关报案——不可简化。', note:'简化的仅是通知个人的方式（可用公告代替逐一通知）。向监管部门报告和报案义务须完整、及时履行。建议企业制定清晰的安全事件应急预案，明确报告时限和渠道。' },
+  crossborder_tell: { layer:'Layer 03 · 底线义务', title:'出境告知+单独同意', badge:'不可简化', bcls:'co', desc:'向境外提供个人信息时，告知义务（告知境外接收方名称、联系方式、处理目的和方式、信息种类、个人行使权利的方式和程序）和个人的单独同意——不因任何豁免情形而免除。', note:'这是企业最容易犯错的地方。出境豁免（免安全评估/标准合同/认证）不等于免除告知和同意。许多企业因误解而忽略了出境告知和单独同意的合规步骤。' },
+  important_data: { layer:'Layer 03 · 底线义务', title:'重要数据不适用简化', badge:'第10条第2款', bcls:'gy', desc:'《规定》第10条第二款明确排除重要数据。重要数据的出境：①不适用六类豁免情形；②不适用数量豁免；③须按照《数据安全法》和《数据出境安全评估办法》的完整程序办理。', note:'人类遗传资源信息、特定地理信息、关键行业运行数据等可能属于重要数据。企业应参照行业重要数据目录进行识别。一旦涉及重要数据，个人信息的简化机制完全不适用。' },
+  cooperate: { layer:'Layer 03 · 底线义务', title:'配合监督检查', badge:'第21条', bcls:'gy', desc:'网信部门、公安机关和其他履行个人信息保护职责的部门可以采取抽查评估、审计报告等方式进行监督检查。企业应当予以配合，提供合规审计表、评估表、管理制度等文件。', note:'拒绝或阻碍监督检查本身即构成违法。建议企业指定专门人员作为监督检查的联络人。完整、清晰的合规档案是配合检查的最好准备。' },
+  record_keep: { layer:'Layer 03 · 底线义务', title:'留档备查义务', badge:'强制义务', bcls:'gy', desc:'合规审计自查表至少保存5年，影响评估表至少保存3年。这些文件既是企业的合规底稿，也是监管部门检查的重点，更是在面临处罚时证明"已尽合理注意义务"的关键证据。', note:'建议建立合规档案管理体系：处理规则档案、同意档案、PIA档案、审计档案、安全事件档案、合同档案、培训档案、权利响应档案——分门别类、定期更新、妥善保管。' },
+
+  // LAYER 04
+  cb_contract: { layer:'Layer 04 · 数据出境豁免', title:'合同必需场景', badge:'第10条第1项', bcls:'rd', desc:'为订立、履行个人作为一方当事人的合同确需向境外提供个人信息的，免予安全评估/标准合同/认证。典型场景：跨境购物、跨境寄递、跨境汇款、跨境支付、跨境开户、机票酒店预订、签证办理、考试服务等。', note:'"确需"是关键词——非合同履行所必需的信息不得借合同之机捆绑出境。此类豁免适用于小型处理者和一般处理者（来自《促进和规范数据跨境流动规定》第5条），小型处理者专属的新增豁免是第4项。' },
+  cb_hr: { layer:'Layer 04 · 数据出境豁免', title:'跨境人力资源管理', badge:'第10条第2项', bcls:'rd', desc:'按照依法制定的劳动规章制度和依法签订的集体合同实施跨境人力资源管理，确需向境外提供员工个人信息的，免予安全评估/标准合同/认证。适用于跨国企业集团内部的员工信息跨境传输。', note:'两个前提：①须有依法制定的劳动规章制度或集体合同为依据；②"确需"——非HR管理所必需的员工信息不适用。建议将员工信息的出境规则写入公司规章制度并经民主程序。' },
+  cb_emergency: { layer:'Layer 04 · 数据出境豁免', title:'紧急情况保护生命财产', badge:'第10条第3项', bcls:'rd', desc:'紧急情况下为保护自然人的生命健康和财产安全，确需向境外提供个人信息的，免予安全评估/标准合同/认证。例如：境外旅行中突发疾病需传输国内医疗记录、自然灾害时需提供在当地的员工信息等。', note:'此豁免适用场景窄——必须是客观紧急情况，而非企业商业需要。事后可能需要向监管部门说明紧急情况的合理性。' },
+  cb_legal: { layer:'Layer 04 · 数据出境豁免', title:'法定职责或义务', badge:'第10条第4项 ★', bcls:'rd', desc:'为履行法定职责或者法定义务，确需向境外提供个人信息的——此项为《规定》新增，仅适用于小型个人信息处理者。例如：配合境外药政机构核查（如适用）、履行境外上市许可持有人法定报告义务等。', note:'这是《规定》相比2024年《促进和规范数据跨境流动规定》的核心增量。但"法定义务"指中国法义务还是包括境外法义务，目前尚无官方解释，建议采取审慎立场。' },
+  cb_quantity: { layer:'Layer 04 · 数据出境豁免', title:'数量豁免 <10万人', badge:'第10条第5项', bcls:'rd', desc:'非关键信息基础设施运营者，自当年1月1日起累计向境外提供不满10万人个人信息（不含敏感个人信息）的，免予安全评估/标准合同/认证。注意与第2条的区别：此处是"当年累计出境量"，而非"总处理量"。', note:'两个硬性前提：①企业不属于CIIO（关键信息基础设施运营者）；②出境信息不含敏感个人信息。涉及敏感信息出境的，不适用此数量豁免。出境量包含了企业员工、客户等所有类型的个人信息主体。' },
+  cb_nonexempt: { layer:'Layer 04 · 数据出境', title:'告知+单独同意不可豁免', badge:'第10条第3款', bcls:'bl', desc:'小型处理者向境外提供个人信息，即使符合豁免条件免予安全评估/标准合同/认证，仍须按照法律、行政法规的规定履行告知义务、取得个人的单独同意。不可捆绑授权、不可一揽子统一同意出境。', note:'这是最容易被忽略的合规点。出境豁免≠告知豁免≠同意豁免。企业应在出境前确保：①告知文本中明确出境目的和接收方；②单独获得个人的出境同意（独立勾选框）。' },
+  cb_important: { layer:'Layer 04 · 数据出境', title:'重要数据排除', badge:'第10条第2款', bcls:'bl', desc:'前款所称向境外提供的个人信息，不包括重要数据。重要数据的出境须严格按照《数据安全法》及《数据出境安全评估办法》进行评估，不适用任何简化或豁免。', note:'人类遗传资源信息在部分行业的重要数据识别实践中属于备选项——生物医药企业应特别关注。一旦被告知或公布为重要数据，整条简化通道即不适用。' },
+  cb_province: { layer:'Layer 04 · 数据出境', title:'省级网信程序便利', badge:'第10条第5款', bcls:'gn', desc:'小型处理者确需向境外提供个人信息，依法申请数据出境安全评估的，可以由所在地省级网信部门形成评估结论建议并报国家网信部门核准——相比一般企业直接向国家网信部门申报，程序上更为便捷。', note:'鼓励数据跨境服务中心等为小型处理者提供出境咨询等服务。这是对小型处理者的又一程序性关怀。' },
+
+  // LAYER 05
+  penalty_none: { layer:'Layer 05 · 罚则与合规', title:'应当不予处罚', badge:'第18条', bcls:'gn', desc:'以下情形应当不予处罚：①违法行为轻微并及时改正，没有造成危害后果的；②有证据足以证明没有主观过错的（法律另有规定的除外）；③其他依法不予处罚的情形。', note:'"有证据足以证明没有主观过错"——举证责任在企业一侧。填写完整、留痕清晰的合规审计自查表和影响评估表，在此情境下不仅是合规文档，也是免责证据。' },
+  penalty_may: { layer:'Layer 05 · 罚则与合规', title:'可以不罚 · 初次轻微', badge:'第18条', bcls:'gn', desc:'小型处理者初次违法且危害后果轻微并及时改正的，可以不予处罚。不罚的替代措施：监管部门视情采取约谈、发送提示函等监管措施——柔性的"提醒"取代刚性的处罚。', note:'"初次违法"的认定以该处理者为单位。同一处理者多次违法的，不再享有该宽容空间。这也促使企业在首次被指出问题后全力整改。' },
+  penalty_light: { layer:'Layer 05 · 罚则与合规', title:'从轻或减轻处罚', badge:'第19条', bcls:'am', desc:'以下情形应当从轻或减轻：①主动消除或减轻危害后果；②主动供述监管部门尚未掌握的违法行为；③发生安全事件时及时通知个人并采取补救措施并主动通知有关部门；④配合查处有立功表现；⑤其他法定情形。', note:'发生安全事件后的应对方式直接影响处罚结果。及时通知+补救+主动报告=从轻减轻；掩盖迟报=加重处罚。建议企业制定"安全事件黄金48小时"应急预案。' },
+  credit_impact: { layer:'Layer 05 · 罚则与合规', title:'信用档案影响', badge:'第21条', bcls:'co', desc:'违法处理个人信息或多次发生个人信息安全事件的，除行政处罚外，将记入信用档案并予以公示。信用记录直接关联：招投标资格、银行贷款审批、上市审核、政府补贴和资质申请、商业合作伙伴的尽调评估。', note:'信用影响往往大于罚款金额本身。被记入信用档案可能在关键项目招标中失去资格，或因信用瑕疵导致融资受阻。这是企业不能忽视的"隐形"处罚。' },
+  action_inventory: { layer:'Layer 05 · 合规行动', title:'合规行动清单', badge:'9月1日前', bcls:'bl', desc:'①盘点信息资产（当前留存的个人信息准确数量）；②确认适用资格与退出预案（<10万按新规调整，接近阈值提前准备）；③更新处理规则（3项最低内容+公示方式）；④排查敏感信息处理（人脸/健康/金融等）；⑤建立内部管理制度（在现有文件中增设章节）；⑥指定公开联系人（权利请求受理人）。', note:'关键时间节点：2026年9月1日。建议8月中旬前完成合规差距分析并启动调整。首次合规审计在施行日起5年内完成即可，但越早越好——既是合规，也是保护。' },
+  certification: { layer:'Layer 05 · 合规工具', title:'个人信息保护认证', badge:'第17条', bcls:'pu', desc:'通过个人信息保护认证的小型个人信息处理者，在认证有效期内可以免予开展个人信息保护合规审计。国家支持认证机构针对小型处理者开展认证工作。', note:'认证对于小型处理者是一个值得考虑的选择——一次性认证投入换取5年免审计的程序性便利。同时也是企业个人信息保护能力的市场信号。' },
+};
+
+function show(id, el) {
+  document.querySelectorAll('.nd.active').forEach(n => n.classList.remove('active'));
+  if (el) el.classList.add('active');
+  var d = D[id];
+  var panel = document.getElementById('panel');
+  var accentClass = 'has-accent-' + d.bcls;
+  panel.className = 'detail ' + accentClass;
+  panel.innerHTML =
+    '<div class="detail-layer">' + d.layer + '</div>' +
+    '<div class="detail-title">' + d.title + '</div>' +
+    '<div class="detail-badge ' + d.bcls + '">' + d.badge + '</div>' +
+    '<div class="detail-desc">' + d.desc + '</div>' +
+    '<div class="detail-note">' + d.note + '</div>';
+}
+
+function toggleLayer(id) {
+  document.getElementById(id).classList.toggle('collapsed');
+}
+
+function toggleAllLayers(collapse) {
+  for (var i = 1; i <= 5; i++) {
+    var layer = document.getElementById('layer' + i);
+    if (collapse) layer.classList.add('collapsed');
+    else layer.classList.remove('collapsed');
+  }
+}
+
+function toggleTheme() {
+  var html = document.documentElement;
+  var isDark = html.getAttribute('data-theme') === 'dark';
+  html.setAttribute('data-theme', isDark ? '' : 'dark');
+  try { localStorage.setItem('theme', isDark ? '' : 'dark'); } catch(e) {}
+}
+
+(function() {
+  try {
+    if (localStorage.getItem('theme') === 'dark') {
+      document.documentElement.setAttribute('data-theme', 'dark');
+    }
+  } catch(e) {}
+})();
+
+// Divider drag
+(function() {
+  var divider = document.getElementById('divider');
+  var page = document.querySelector('.page');
+  var isDragging = false;
+  divider.addEventListener('mousedown', function(e) {
+    isDragging = true;
+    divider.classList.add('dragging');
+    document.body.style.cursor = 'col-resize';
+    document.body.style.userSelect = 'none';
+    e.preventDefault();
+  });
+  document.addEventListener('mousemove', function(e) {
+    if (!isDragging) return;
+    var rect = page.getBoundingClientRect();
+    var pct = (e.clientX - rect.left) / rect.width * 100;
+    if (pct > 30 && pct < 80) {
+      page.style.gridTemplateColumns = pct + '% 6px 1fr';
+    }
+  });
+  document.addEventListener('mouseup', function() {
+    if (isDragging) {
+      isDragging = false;
+      divider.classList.remove('dragging');
+      document.body.style.cursor = '';
+      document.body.style.userSelect = '';
+    }
+  });
+})();
+</script>
+</body>
+</html>
